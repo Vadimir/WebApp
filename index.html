@@ -68,9 +68,11 @@
    btn.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
       if (tg.MainButton.isVisible){ //если кнопка показана 
          tg.MainButton.hide() //скрываем кнопку 
+          tg.sendData("скрываем  кнопку"); 
       }
       else{ //иначе
          tg.MainButton.show() //показываем 
+         tg.sendData("показываем кнопку"); 
       }
    });
 
@@ -79,10 +81,12 @@
       if (tg.MainButton.isActive){ //если кнопка показана 
          tg.MainButton.setParams({"color": "#E0FFFF"}); //меняем цвет
          tg.MainButton.disable() //скрываем кнопку 
+          tg.sendData("деактивируем кнопку"); 
       }
       else{ //иначе
          tg.MainButton.setParams({"color": "#143F6B"}); //меняем цвет
          tg.MainButton.enable() //показываем 
+         tg.sendData("активируем кнопку"); 
       }
    });
 
